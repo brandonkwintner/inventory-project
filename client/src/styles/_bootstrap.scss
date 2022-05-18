@@ -1,0 +1,12 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$sizes: 25, 50, 75;
+
+@each $size in $sizes {
+  .vw-#{$size} {
+    width: #{$size}vw;
+  }
+  .vh-#{$size} {
+    height: #{$size}vh;
+  }
+}
