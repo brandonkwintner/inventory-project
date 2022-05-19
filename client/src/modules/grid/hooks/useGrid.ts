@@ -15,6 +15,8 @@ const useGrid = (): GridResponse => {
   const onGridReady = ({ api, columnApi }: GridReadyEvent) => {
     setApi(api);
     setColumnApi(columnApi);
+    // Makes column equi-sized to fill up whole grid //TODO (update if too many cols)
+    api.sizeColumnsToFit();
   };
 
   return { api, columnApi, onGridReady };

@@ -3,4 +3,5 @@ export interface InventoryItem {
   parValue: number;
   price: number;
   quantity: number;
+  date: Date;
 }

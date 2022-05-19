@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { AgGridReact } from 'ag-grid-react';
 
-import { columnDefs, defaultColumnDef } from '../../../lib/config/grid';
+import { gridOptions } from '../../../lib/config/grid';
 
 import { useGrid } from '../hooks/useGrid';
 import { InventoryItem } from '../../../lib/models';
@@ -14,13 +14,12 @@ const Grid: React.FC<IProps> = ({ rowData }) => {
   const { api, columnApi, onGridReady } = useGrid();
 
   return (
-    <div className="ag-theme-alpine vw-100 vh-75">
+    <div className="ag-theme-alpine w-100 vh-75">
       <AgGridReact
         animateRows={true}
         api={api}
         columnApi={columnApi}
-        columnDefs={useMemo(() => columnDefs, [])}
-        defaultColDef={useMemo(() => defaultColumnDef, [])}
+        gridOptions={gridOptions}
         onGridReady={onGridReady}
         rowData={rowData}
       />
