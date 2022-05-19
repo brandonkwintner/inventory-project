@@ -27,8 +27,8 @@ const AddItemForm: React.FC<IProps> = ({ onClose, onSubmit, show }) => {
       <Container fluid className="p-3">
         <div className="d-flex align-items-center my-2">
           <h3 className="flex-grow-1">Add New Inventory Item</h3>
-          <h3 className="fw-light clickable" onClick={() => onClose()}>
-            X
+          <h3 className="text-muted fw-lighter clickable" onClick={() => onClose()}>
+            ✕
           </h3>
         </div>
         <hr />

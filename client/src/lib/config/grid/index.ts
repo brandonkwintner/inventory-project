@@ -1,0 +1,1 @@
+export { gridOptions } from './grid';

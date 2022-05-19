@@ -1,7 +1,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
+// Extend view width and view height
 $sizes: 25, 50, 75;
-
 @each $size in $sizes {
   .vw-#{$size} {
     width: #{$size}vw;
@@ -9,4 +9,15 @@ $sizes: 25, 50, 75;
   .vh-#{$size} {
     height: #{$size}vh;
   }
+}
+
+// Extend button styles to include round button
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  padding: 6px 0px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
 }
