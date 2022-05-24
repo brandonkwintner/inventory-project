@@ -1,8 +1,12 @@
-import { AMOUNT_FORMATTOR_REGEX } from '../constants';
-
 export const amountTypeFormattor = ({ value }: { value: number }): string => {
-  const formattedAmount = Math.floor(value).toString().replace(AMOUNT_FORMATTOR_REGEX, '$1,');
-  return '$' + formattedAmount;
+  if (!value) return '';
+  const formattedAmount = '$' + Number(value.toFixed(2)).toLocaleString('en');
+
+  // Pad extra 0's at end, if necessary
+  const split = formattedAmount.split('.');
+  if (split.length === 1) return formattedAmount + '.00';
+  if (split[1].length === 1) return formattedAmount + '0';
+  return formattedAmount;
 };
 
 export const dateTypeFormattor = ({ value }: { value: Date }): string => {
