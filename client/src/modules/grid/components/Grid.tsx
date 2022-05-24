@@ -1,16 +1,17 @@
 import React from 'react';
+import 'ag-grid-enterprise';
 import { AgGridReact } from 'ag-grid-react';
-
-import { gridOptions } from '../../../lib/config/grid';
+import { GridOptions } from 'ag-grid-community';
 
 import { useGrid } from '../hooks/useGrid';
-import { InventoryItem } from '../../../lib/models';
+import { Item } from '../../../lib/models';
 
 interface IProps {
-  rowData: InventoryItem[];
+  gridOptions: GridOptions;
+  rowData: Item[];
 }
 
-const Grid: React.FC<IProps> = ({ rowData }) => {
+const Grid: React.FC<IProps> = ({ gridOptions, rowData }) => {
   const { api, columnApi, onGridReady } = useGrid();
 
   return (

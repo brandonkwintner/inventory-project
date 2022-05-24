@@ -1,0 +1,53 @@
+import { Item } from '../../lib/models';
+
+export const mockInventoryItems: Item[] = [
+  {
+    _id: '1',
+    category: 'Bathroom',
+    name: 'Hair Dryer',
+    notes: 'Newer 2022 model',
+    quantity: 12,
+    preferredVendor: ['Amazon', 'Costco'],
+    reorderLimit: 4,
+    unitPrice: 25,
+    vendorSKU: 'DV765S0NUB2',
+  },
+  {
+    _id: '2',
+    category: 'Bathroom',
+    name: 'Hair Brush',
+    quantity: 20,
+    preferredVendor: ['Costco'],
+    unitPrice: 30,
+    vendorSKU: 'DV7321124B2',
+  },
+  {
+    _id: '3',
+    category: 'Bathroom',
+    name: 'Tooth Brush',
+    notes: 'Cheapest to buy in bulk',
+    quantity: 500,
+    preferredVendor: ['Amazon'],
+    unitPrice: 0.5,
+    vendorSKU: 'EA765S0456B2',
+  },
+  {
+    _id: '4',
+    category: 'Exterior',
+    name: 'Brick',
+    quantity: 50,
+    preferredVendor: ['Home Depot'],
+    unitPrice: 50,
+    vendorSKU: 'BGVDBHJS0NUB2',
+  },
+  {
+    _id: '5',
+    category: 'Wine',
+    name: 'Red Wine',
+    notes: 'Gets you drunk',
+    quantity: 100,
+    preferredVendor: ['Total Wine'],
+    unitPrice: 40,
+    vendorSKU: 'EHNF65S0NUB2',
+  },
+];
